@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This is the backend for agrotech mini project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev":"nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jaivin Joseph",
@@ -14,5 +17,8 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "mongoose": "^7.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
