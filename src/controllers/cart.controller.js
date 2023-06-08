@@ -1,4 +1,4 @@
-import CartSchema from "../models/cart.model";
+import CartSchema from "../models/cart.model.js";
 const addCartData = async (req, res, next) => {
   const data = req.body;
   try {

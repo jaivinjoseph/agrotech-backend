@@ -1,4 +1,4 @@
-import ProductTypeSchema from "../models/producttypes.model";
+import ProductTypeSchema from "../models/producttypes.model.js";
 const addProductType = async (req, res, next) => {
   const data = req.body;
   try {

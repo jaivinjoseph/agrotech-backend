@@ -1,4 +1,4 @@
-import UserSchema from "../models/user.model";
+import UserSchema from "../models/user.model.js";
 
 const getUserById = () => {
   const user_id = req.params.user_id;

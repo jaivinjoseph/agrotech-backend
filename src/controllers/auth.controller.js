@@ -1,4 +1,4 @@
-import UserSchema from "../models/user.model";
+import UserSchema from "../models/user.model.js";
 const login = async (req, res, next) => {
   try {
     const user = await UserSchema({
