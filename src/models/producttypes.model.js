@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const productTypeSchema = mongoose.Schema(
   {
-    typename: String,
+    name: String,
   },
   {
     collection: "producttype",

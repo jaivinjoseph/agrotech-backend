@@ -1,9 +1,10 @@
 import UserSchema from "../models/user.model.js";
 const login = async (req, res, next) => {
+  console.log(req.params);
   try {
-    const user = await UserSchema({
-      email: req.body.email,
-      password: req.body.password,
+    const user = await UserSchema.find({
+      email: req.params.email,
+      password: req.params.password,
     });
     if (user.length <= 0) {
       req.status(400).json({
@@ -24,12 +25,20 @@ const login = async (req, res, next) => {
 const signup = async (req, res, next) => {
   const data = req.body;
   try {
-    const newUser = new UserSchema(data);
-    await newUser.save();
-    res.status(200).json({
-      success: true,
-      message: "User registered successfully",
-    });
+    const user = await UserSchema.find({ email: req.body.email });
+    if (user.length > 0) {
+      res.status(400).json({
+        success: false,
+        message: "user already exist with this email,try with another email",
+      });
+    } else {
+      const newUser = new UserSchema(data);
+      await newUser.save();
+      res.status(200).json({
+        success: true,
+        message: "User registered successfully",
+      });
+    }
   } catch (error) {
     res.status(500).json({
       success: false,

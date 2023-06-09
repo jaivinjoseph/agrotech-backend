@@ -4,6 +4,6 @@ import {
   getAllProductTypes,
 } from "../controllers/producttypes.controller.js";
 const router = express.Router();
-router.get("/add", addProductType);
-router.post("/get", getAllProductTypes);
+router.post("/add", addProductType);
+router.get("/get", getAllProductTypes);
 export default router;

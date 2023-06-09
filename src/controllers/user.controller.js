@@ -1,9 +1,9 @@
 import UserSchema from "../models/user.model.js";
 
-const getUserById = () => {
+const getUserById = async (req, res, next) => {
   const user_id = req.params.user_id;
   try {
-    const user = UserSchema.find({ _id: user_id });
+    const user = await UserSchema.find({ _id: user_id });
     if (user.length <= 0) {
       res
         .status(404)

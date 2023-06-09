@@ -42,7 +42,7 @@ const getAProductById = async (req, res, next) => {
         message: "There is no product with this id. Try again with another one",
       });
     } else {
-      res.status(200).json({ success: true, data: product });
+      res.status(200).json({ success: true, data: product[0] });
     }
   } catch (error) {
     res.status(500).json({
@@ -51,4 +51,22 @@ const getAProductById = async (req, res, next) => {
     });
   }
 };
-export { addProduct, getAllProducts, getAProductById };
+const getProductByTypeId = async (req, res, next) => {
+  try {
+    const products = await ProductSchema.find({ type: req.params.type_id });
+    if (products.length > 0) {
+      res.status(200).json({ success: true, data: products });
+    } else {
+      res.status(404).json({
+        success: false,
+        message: "No products found under this type,",
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Internal server error,try again later",
+    });
+  }
+};
+export { addProduct, getAllProducts, getAProductById, getProductByTypeId };
