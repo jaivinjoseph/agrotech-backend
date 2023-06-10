@@ -1,0 +1,226 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "agrotech",
+    "dateExported": "2023-06-10T07:12:10.987Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "51464114-6d62-4fdd-8826-d78e4cf75528",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-06-09T02:40:58.578Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "850e1d07-1ef7-48e2-a211-d893d59f2f11",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-06-09T02:49:50.488Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "2be0aebc-f9f9-4ef5-a7d9-e51194bce9dc",
+            "name": "producttype",
+            "containerId": "",
+            "created": "2023-06-09T02:59:04.816Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "b97df643-c670-4031-adfc-056c88f49b52",
+            "name": "products",
+            "containerId": "",
+            "created": "2023-06-09T03:06:30.205Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "33f1b362-bed9-4177-b84f-93471b312c17",
+            "name": "cart",
+            "containerId": "",
+            "created": "2023-06-09T03:19:06.733Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "dc823e55-c793-43ed-bdfb-f7504e6f5c3a",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "51464114-6d62-4fdd-8826-d78e4cf75528",
+            "name": "login",
+            "url": "auth/login/jaivin@gmail.com/123",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-09T02:41:06.559Z",
+            "modified": "2023-06-09T02:43:35.884Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "50cc8581-8185-4a81-baa2-ac7b8e8c6757",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "51464114-6d62-4fdd-8826-d78e4cf75528",
+            "name": "signup",
+            "url": "auth/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-09T02:48:37.119Z",
+            "modified": "2023-06-09T02:49:30.551Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"jaivin@gmail.com\",\n  \"password\":\"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eb321997-ace0-44f2-ab24-4eb7108d4c8a",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "850e1d07-1ef7-48e2-a211-d893d59f2f11",
+            "name": "getUserById",
+            "url": "user/64819ebb5fce8350dad6c281",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-09T02:50:40.479Z",
+            "modified": "2023-06-09T02:52:30.406Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a046716c-8106-42d6-a222-a3ef2d583246",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "2be0aebc-f9f9-4ef5-a7d9-e51194bce9dc",
+            "name": "addProductType",
+            "url": "producttype/add",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-06-09T02:59:42.800Z",
+            "modified": "2023-06-09T03:00:31.388Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"vegetables\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b86177b8-f0bc-412a-8422-9946ef442067",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "2be0aebc-f9f9-4ef5-a7d9-e51194bce9dc",
+            "name": "getAllProductType",
+            "url": "producttype/get",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-06-09T03:05:54.527Z",
+            "modified": "2023-06-09T03:06:05.641Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0bb21efb-cf9c-428f-9cf7-1619b6ce8115",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "b97df643-c670-4031-adfc-056c88f49b52",
+            "name": "addAProduct",
+            "url": "product/add",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-06-09T03:06:47.185Z",
+            "modified": "2023-06-09T03:10:26.120Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"tomato\",\n  \"type\":\"648296020815b3e5765fe6b0\",\n  \"quantity\":20,\n  \"image\":\"https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?cs=srgb&dl=pexels-pixabay-533280.jpg&fm=jpg\",\n  \"price\":100,\n  \"description\":\"this is awesome tomato\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5b889dd4-6bf5-4c56-89ac-70054e715940",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "b97df643-c670-4031-adfc-056c88f49b52",
+            "name": "getAllProducts",
+            "url": "product/get",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-06-09T03:11:33.939Z",
+            "modified": "2023-06-09T03:12:53.908Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "378ee750-10c0-482b-aadc-38c9af2e3896",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "b97df643-c670-4031-adfc-056c88f49b52",
+            "name": "getProductById",
+            "url": "product/648298220815b3e5765fe6b3",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-06-09T03:13:14.529Z",
+            "modified": "2023-06-09T03:13:32.019Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b37d62d1-6b00-43b8-9c23-fa0b6e0ab278",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "b97df643-c670-4031-adfc-056c88f49b52",
+            "name": "getProductsByTypeId",
+            "url": "product/type/648296020815b3e5765fe6b0",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-06-09T03:18:07.669Z",
+            "modified": "2023-06-09T03:18:26.485Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "77f5a2ce-4254-49af-8504-337e0ccdbd01",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "33f1b362-bed9-4177-b84f-93471b312c17",
+            "name": "addToCart",
+            "url": "cart/add",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-06-09T03:19:17.876Z",
+            "modified": "2023-06-09T03:31:12.103Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product_id\":\"648298220815b3e5765fe6b3\",\n  \"user_id\":\"64819ebb5fce8350dad6c281\",\n  \"selectedquantity\":20\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a970d700-43f6-4912-82f7-5ec0f11930d7",
+            "colId": "2ea6ff1d-eacb-4c5e-bd3a-b0164d3ed790",
+            "containerId": "33f1b362-bed9-4177-b84f-93471b312c17",
+            "name": "getCardDataByUserId",
+            "url": "cart/user/64819ebb5fce8350dad6c281",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-06-09T03:34:44.391Z",
+            "modified": "2023-06-09T03:35:14.027Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "headers": [],
+        "tests": [],
+        "options": {
+            "baseUrl": "http://localhost:1337/"
+        }
+    }
+}
