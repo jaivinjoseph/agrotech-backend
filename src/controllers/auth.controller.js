@@ -12,7 +12,13 @@ const login = async (req, res, next) => {
         message: "user does not exist,try with valid credentials",
       });
     } else {
-      res.status(200).json({ success: true, user_id: user[0]._id });
+      res
+        .status(200)
+        .json({
+          success: true,
+          user_id: user[0]._id,
+          message: "login successful",
+        });
     }
   } catch (error) {
     res.status(500).json({
@@ -24,6 +30,7 @@ const login = async (req, res, next) => {
 
 const signup = async (req, res, next) => {
   const data = req.body;
+  console.log(data.email);
   try {
     const user = await UserSchema.find({ email: req.body.email });
     if (user.length > 0) {

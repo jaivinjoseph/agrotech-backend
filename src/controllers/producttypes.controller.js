@@ -23,7 +23,7 @@ const getAllProductTypes = async (req, res, next) => {
         message: "no product type found,add a new one to continue",
       });
     } else {
-      res.status(200).json({ success: false, data: allProductTypes });
+      res.status(200).json({ success: true, data: allProductTypes });
     }
   } catch (error) {
     res.status(500).json({

@@ -19,7 +19,7 @@ const getAllProducts = async (req, res, next) => {
     const products = await ProductSchema.find();
     if (products.length <= 0) {
       res.status(404).json({
-        success: false,
+        success: true,
         message: "No product found,add anew one to continue",
       });
     } else {
